@@ -9,13 +9,13 @@ defineFamily :-
     assert(family(granddads)),
     assert(family(grandfather)),
     assert(family(grandfathers)),
-	assert(family(dad)),
+    assert(family(dad)),
     assert(family(dads)),
     assert(family(father)),
     assert(family(fathers)),
-	assert(family(brother)),
+    assert(family(brother)),
     assert(family(brothers)),
-	assert(family(sister)),
+    assert(family(sister)),
     assert(family(sisters)),
     assert(family(cousin)),
     assert(family(cousins)),
@@ -23,12 +23,11 @@ defineFamily :-
     assert(family(nephews)),
     assert(family(mother)),
     assert(family(mothers)),
-	assert(family(mom)),
+    assert(family(mom)),
     assert(family(moms)),
     assert(family(grandmother)),
     assert(family(grandmothers)),
-	assert(family(grandmom)),
-    assert(family(grandmoms)).
+    assert(family(grandmom)).
 	
 defineFeelings :-
     assert(feelings(sad)),
@@ -55,8 +54,8 @@ defineWork :-
     assert(work(hammering)),
     assert(work(building)),
     assert(work(job)),
-	assert(work(work)).
-
+    assert(work(work)).
+    
 % Procedures to identify relevant relations 
 isFamily(Y) :-
     family(Y).
@@ -99,10 +98,10 @@ iterateList(List, Size) :-
                      isWork(H)      -> respondToWork(),  break;
                                        write("")),
           
-		          /***
+                  /***
                    * If head of the list fails all checks for relevant words
-		           * from above, then keep popping off the top of the list
-		           * and check the next element for relevance
+                   * from above, then keep popping off the top of the list
+                   * and check the next element for relevance
                    ***/
                    removehead(List, New), 
                    length(New, S),
