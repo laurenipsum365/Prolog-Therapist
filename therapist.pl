@@ -85,14 +85,14 @@ iterateList(List, Size) :-
         (Size > 0 ->
                      nth0(0,List,H),
                      (Size = 1 -> remove_char(H,.,H1),
-                                  % conditional 2 - check Head for relevance with periods on end 
+                                  % conditional 2 - check Head for relevance WITH periods on end 
                                   (isAFeeling(H1) -> respondToFeel(H1), break;
                                   isFamily(H1)    -> respondToFam(H1),  break; 
                                   isWork(H1)      -> respondToWork(),  break;
                                                      write(""));
                                   write("")), 
 
-                     % conditional 3 - check Head for relevance without periods on end
+                     % conditional 3 - check Head for relevance WITHOUT periods on end
                      (isAFeeling(H) -> respondToFeel(H), break;
                      isFamily(H)    -> respondToFam(H),  break; 
                      isWork(H)      -> respondToWork(),  break;
