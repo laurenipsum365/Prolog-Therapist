@@ -1,6 +1,6 @@
 
 % ----------------------------------------- %
-% -------- Our Relevant Relations --------- %
+% ---------- Relevant Relations ----------- %
 % ----------------------------------------- %
 
 % Procedures to define relevant relations
