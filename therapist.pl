@@ -128,7 +128,20 @@ respondToWork() :-
     write("Tell me more about your work"),
     continueSession.
 
+endTherapy() :- 
+	nl, nl, 
+	write("Sorry, I'm a shitty therapist, I tried.. Peace."),
+	nl, nl. 
+	halt.
+
 ?- defineFamily.
 ?- defineFeelings.
 ?- defineWork.
+/*** 
+ * TODO: add error handling in functions so the program doesn't just end.
+ ***/
 ?- startTherapy.
+?- startTherapy.
+?- startTherapy.
+?- startTherapy.
+?- endTherapy.
